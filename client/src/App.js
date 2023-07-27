@@ -8,7 +8,7 @@ import Mainpage from "./screens/mainpage";
 function App() {
   return (
     <>
-      <h1 className="text-center">UAuth</h1>
+      <h1 className="text-center">Movie Searcher</h1>
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Signup />} />
