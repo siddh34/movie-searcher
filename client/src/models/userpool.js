@@ -1,8 +1,11 @@
 import { CognitoUserPool } from "amazon-cognito-identity-js";
 
+const poolID = process.env.REACT_APP_UserPoolId;
+const cid = process.env.REACT_APP_ClientId;
+
 const poolData = {
-  UserPoolId: "us-west-2_TJOlE1Kj0",
-  ClientId: "529uncff24r3ssaoov35tedvov",
+  UserPoolId: poolID,
+  ClientId: cid,
 };
 
 const cognitoUser = new CognitoUserPool(poolData);

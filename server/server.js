@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require("body-parser");
 const axios = require("axios");
 const cors = require("cors");
+require("dotenv").config();
 const app = express()
 app.use(bodyParser.json());
 app.use(cors());
@@ -13,7 +14,9 @@ app.get("/api", async (req, res) => {
 
     console.log(searchQuery);
 
-    let key = "ca9558c4";
+    let key = process.env.API_KEY;
+
+    console.log(key)
 
     try {
         const response = await axios.get(
